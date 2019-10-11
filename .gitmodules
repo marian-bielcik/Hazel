@@ -1,6 +1,7 @@
 [submodule "Hazel/vendor/spdlog"]
 	path = Hazel/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+	branch = v1.x
 [submodule "Hazel/vendor/imgui"]
 	path = Hazel/vendor/imgui
 	url = https://github.com/marian-bielcik/imgui
