@@ -43,30 +43,30 @@
 	#error "Unknown platform!"
 #endif // End of platform detection
 
-
-// DLL support
-#ifdef HZ_PLATFORM_WINDOWS
-	#if HZ_DYNAMIC_LINK
-		#ifdef HZ_BUILD_DLL
-			#define HAZEL_API __declspec(dllexport)
-		#else
-			#define HAZEL_API __declspec(dllimport)
-		#endif
-	#else
-		#define HAZEL_API
-	#endif
-#elif defined HZ_PLATFORM_LINUX
-/*
-	#ifdef HZ_BUILD_DLL
-		#define HAZEL_API __attribute__((visibility("default")))
-	#else
-		#define HAZEL_API
-	#endif
-*/
-	#define HAZEL_API
-#else
-	#error Unsupported platform!
-#endif
+//
+//// DLL support
+//#ifdef HZ_PLATFORM_WINDOWS
+//	#if HZ_DYNAMIC_LINK
+//		#ifdef HZ_BUILD_DLL
+//			#define HAZEL_API __declspec(dllexport)
+//		#else
+//			#define HAZEL_API __declspec(dllimport)
+//		#endif
+//	#else
+//		#define HAZEL_API
+//	#endif
+//#elif defined HZ_PLATFORM_LINUX
+///*
+//	#ifdef HZ_BUILD_DLL
+//		#define HAZEL_API __attribute__((visibility("default")))
+//	#else
+//		#define HAZEL_API
+//	#endif
+//*/
+//	#define HAZEL_API
+//#else
+//	#error Unsupported platform!
+//#endif
 
 #ifdef HZ_DEBUG
 	#define HZ_ENABLE_ASSERTS
