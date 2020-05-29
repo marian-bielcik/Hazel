@@ -6,6 +6,7 @@ bin/
 
 # Files
 *.user
+*.kdev4
 Makefile
 Hazel.config
 Hazel.creator
