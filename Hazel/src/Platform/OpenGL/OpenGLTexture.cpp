@@ -2,6 +2,7 @@
 #include "Platform/OpenGL/OpenGLTexture.h"
 
 #include <stb_image.h>
+#include <GLFW/glfw3.h>
 
 namespace Hazel {
 
@@ -74,7 +75,7 @@ namespace Hazel {
 	{
 		HZ_PROFILE_FUNCTION();
 
-		glDeleteTextures(1, &m_RendererID);
+        glDeleteTextures(1, &m_RendererID);
 	}
 
 	void OpenGLTexture2D::SetData(void* data, uint32_t size)
