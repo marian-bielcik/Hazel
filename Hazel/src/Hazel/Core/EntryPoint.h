@@ -1,7 +1,7 @@
 #pragma once
 #include "Hazel/Core/Base.h"
 
-#if defined HZ_PLATFORM_WINDOWS
+#if defined (HZ_PLATFORM_WINDOWS) || defined (HZ_PLATFORM_LINUX)
 
 extern Hazel::Application* Hazel::CreateApplication();
 
@@ -21,6 +21,7 @@ int main(int argc, char** argv)
 	delete app;
 	HZ_PROFILE_END_SESSION();
 }
+/*
 #elif defined HZ_PLATFORM_LINUX
 
 extern Hazel::Application* Hazel::CreateApplication();
@@ -36,5 +37,5 @@ int main(int argc, char** argv)
     app->Run();
     delete app;
 }
-
+*/
 #endif
