@@ -209,10 +209,27 @@ project "Hazelnut"
 		"%{IncludeDir.glm}"
 	}
 
-	links
-	{
-		"Hazel"
-	}
+	filter "system:linux"
+		links
+		{
+			"Hazel",
+			"GLFW",
+			"Glad",
+			"ImGui",
+			"Xrandr",
+			"Xi",
+			"GLEW",
+			"GLU",
+			"GL",
+			"X11",
+			"dl",
+			"pthread",
+		}
+	filter "system:windows"
+		links
+		{
+			"Hazel",
+		}
 
 	filter "system:windows"
 		systemversion "latest"
