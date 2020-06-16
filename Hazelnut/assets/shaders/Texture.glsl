@@ -1,8 +1,7 @@
 // Basic Texture Shader
 
 #type vertex
-//#version 330 core
-#version 450 core
+#version 330 core
 
 layout(location = 0) in vec3 a_Position;
 layout(location = 1) in vec4 a_Color;
@@ -27,8 +26,7 @@ void main()
 }
 
 #type fragment
-//#version 330 core
-#version 450 core
+#version 330 core
 
 layout(location = 0) out vec4 color;
 
@@ -48,7 +46,6 @@ void main()
 		case 1: texColor *= texture(u_Textures[1], v_TexCoord * v_TilingFactor); break;
 		case 2: texColor *= texture(u_Textures[2], v_TexCoord * v_TilingFactor); break;
 		case 3: texColor *= texture(u_Textures[3], v_TexCoord * v_TilingFactor); break;
-		case 4: texColor *= texture(u_Textures[4], v_TexCoord * v_TilingFactor); break;
 		case 5: texColor *= texture(u_Textures[5], v_TexCoord * v_TilingFactor); break;
 		case 6: texColor *= texture(u_Textures[6], v_TexCoord * v_TilingFactor); break;
 		case 7: texColor *= texture(u_Textures[7], v_TexCoord * v_TilingFactor); break;
