@@ -143,7 +143,7 @@ namespace Hazel {
 		ImGui::Text("Vertices: %d", stats.GetTotalVertexCount());
 		ImGui::Text("Indices: %d", stats.GetTotalIndexCount());
 
-		if (m_SquareEntity)
+//		if (m_SquareEntity)
 		{
 			ImGui::Separator();
 			auto& tag = m_SquareEntity.GetComponent<TagComponent>().Tag;
