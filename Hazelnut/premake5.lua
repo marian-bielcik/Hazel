@@ -33,6 +33,7 @@ project "Hazelnut"
 			"GLFW",
 			"Glad",
 			"ImGui",
+			"yaml-cpp",
 			"Xrandr",
 			"Xi",
 			"GLEW",
