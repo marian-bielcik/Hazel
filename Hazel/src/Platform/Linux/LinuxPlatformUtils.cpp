@@ -3,7 +3,7 @@
 
 namespace Hazel {
 
-	std::optional<std::string> FileDialogs::OpenFile(const char* filter)
+	std::string FileDialogs::OpenFile(const char* filter)
 	{
 		char tmp[1024] = {0};
 		char parameter[1024] = {0};
@@ -38,11 +38,11 @@ namespace Hazel {
 
 			return std::string(filename);
 		}else{
-			return std::nullopt;
+			return std::string();
 		}
 	}
 
-	std::optional<std::string> FileDialogs::SaveFile(const char* filter)
+	std::string FileDialogs::SaveFile(const char* filter)
 	{
 		char tmp[1024] = {0};
 		char parameter[1024] = {0};
@@ -77,7 +77,7 @@ namespace Hazel {
 
 			return std::string(filename);
 		}else{
-			return std::nullopt;
+			return std::string();
 		}
 	}
 }

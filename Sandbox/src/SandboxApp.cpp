@@ -10,21 +10,24 @@
 #include "Sandbox2D.h"
 #include "ExampleLayer.h"
 
-class Sandbox : public Hazel::Application
-{
-public:
-	Sandbox()
+namespace Hazel {
+	class Sandbox : public Application
 	{
-		// PushLayer(new ExampleLayer());
-		PushLayer(new Sandbox2D());
-	}
+	public:
+		Sandbox(ApplicationCommandLineArgs args)
+			: Application("Sandbox", args)
+		{
+			// PushLayer(new ExampleLayer());
+			PushLayer(new Sandbox2D());
+		}
 
-	~Sandbox()
+		~Sandbox()
+		{
+		}
+	};
+
+	Application* CreateApplication(ApplicationCommandLineArgs args)
 	{
+		return new Sandbox(args);
 	}
-};
-
-Hazel::Application* Hazel::CreateApplication()
-{
-	return new Sandbox();
 }
